@@ -66,3 +66,44 @@
 
     <title>Online Exam English</title>
 </head>
+<body>
+    
+    <!-- Default form login -->
+    <form class="text-center border border-light w-25 p-3 mx-auto" action="#!" method="post" >
+
+        <p class="h4 mb-4">Admin Login</p>
+
+        <!-- Email -->
+        <input name="email_admin" type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" value="<?php 
+            if(isset($_COOKIE['user_admin']))
+                echo ($_COOKIE['user_admin']);
+            else echo "";?>">
+
+        <!-- Password -->
+        <input name="password_admin" type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" value="<?php 
+            if(isset($_COOKIE['pass_admin']))
+                echo ($_COOKIE['pass_admin']);
+            else echo "";?>">
+
+        <div class="d-flex justify-content-around">
+            <div>
+                <!-- Remember me -->
+                <div class="custom-control custom-checkbox">
+                    <input name="check_admin" type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign in button -->
+        <button name="btn_admin" class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+    </form>
+    <!-- Default form login -->
+</body>
+
+</html>
+
+<?php
+    include '../inc/footer.php';
+?>
